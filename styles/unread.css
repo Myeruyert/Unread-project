@@ -10,3 +10,11 @@
   background-image: url("https://unread.today/files/dca82359-3f6e-4c03-99ef-ef493c68a7aa/0f9eacff441cfc4602498a98f5946f9f.jpg");
   background-size: cover;
 }
+
+.logo {
+  display: flex;
+}
+
+.logo img {
+  height: 18px;
+}
