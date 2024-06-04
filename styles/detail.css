@@ -1,0 +1,124 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font: normal 10px / 20px "Helvetica Neue", Helvetica, Arial, sans-serif;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  background: #fafafa;
+  color: #1c1c1c;
+}
+
+.main-header {
+  width: 100%;
+  background-color: white;
+}
+
+header {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1525px;
+  height: 85px;
+  padding: 24px 0 19px;
+  margin: auto;
+  z-index: 10;
+  background-color: white;
+}
+
+menu {
+  font-size: 2rem;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 1116px;
+  height: 42px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 18px;
+}
+
+.logo p {
+  font-size: 20px;
+  margin: 0 17px 0 30px;
+  opacity: 0.3;
+}
+
+.search {
+  display: flex;
+}
+
+.fa-magnifying-glass {
+  font-size: 1.5rem;
+  opacity: 0.7;
+  margin: 8px 10px 0 0px;
+}
+
+.searchbox input {
+  width: 250px;
+  height: 30px;
+  border: none;
+  background-color: transparent;
+  color: white;
+  outline: none;
+  caret-color: white;
+  font-size: 1.5rem;
+}
+
+input::placeholder {
+  color: white;
+  opacity: 0.7;
+  font-size: 1.5rem;
+  padding-left: 5px;
+}
+
+.next-article {
+  display: flex;
+  align-items: center;
+  font-size: 12.6px;
+}
+
+.next-article .first {
+  opacity: 0.7;
+}
+
+.next-article b {
+  margin: 0 10px 0 5px;
+}
+
+.next-article .box {
+  padding: 8px 18px;
+  border-radius: 30px;
+  background-color: rgba(255, 255, 255, 0.5);
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.fa-circle {
+  font-size: 5px;
+}
+
+.social-media i {
+  font-size: 13px;
+  opacity: 0.4;
+  margin-left: 11px;
+}
+
+.fa-brands {
+  cursor: pointer;
+}
