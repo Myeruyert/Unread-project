@@ -122,3 +122,111 @@ input::placeholder {
 .fa-brands {
   cursor: pointer;
 }
+
+.article-container {
+  font-size: 1.26rem;
+  margin: 0 auto;
+  padding-top: 8.7em;
+  padding-bottom: 2.6em;
+  width: calc(100% - 90px);
+  max-width: 1525px;
+  border: 1px solid black;
+}
+
+.major {
+  max-width: 1186px;
+  margin: auto;
+}
+
+.top-title {
+  /* padding: 0 35px; */
+  border: 1px solid pink;
+ 
+}
+
+.top-title p {
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 1.26rem;
+  line-height: 2.2rem;
+  color: #6d7378;
+  margin: 0 0 1.5rem 0;
+}
+
+a {
+  color: #0078f6;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.top-title .date a {
+  margin-right: 10px;
+}
+
+.top-title .predot::before {
+  content: "•";
+  font-size: 1.5rem;
+  vertical-align: middle;
+  color: #6d7378;
+  margin: 0 10px 0 10px;
+}
+
+h1 {
+  font-size: 3.24rem;
+  line-height: 4.4rem;
+  letter-spacing: 0.03rem;
+  margin-bottom: 6.6rem;
+  max-width: 1000px;
+  color: black;
+}
+
+.top-title img {
+  width: 100%;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 4rem;
+
+}
+
+.left-aside {
+  border: 1px solid red;
+  flex:1;
+}
+
+.main {
+  border: 1px solid blue;
+  flex:2;
+}
+
+.right-aside {
+  border: 1px solid yellow;
+  flex: 1;
+}
+
+.profile {
+  display: flex;
+  gap: 10px;
+}
+
+.profile img {
+  width: 4rem;
+  border-radius: 50%;
+  box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.2);
+}
+
+.profile span {
+  font-size: 1.26rem;
+  font-weight: 600;
+  color: #888888;
+}
+
+.profile span a {
+  color: black;
+  padding-top: 3px;
+  line-height: 1.7rem;
+  transition: all 0.2s ease-in-out;
+  font-weight: 700;
+}
