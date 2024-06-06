@@ -131,7 +131,7 @@ input::placeholder {
 }
 
 .social-media i {
-  font-size: 13px;
+  font-size: 15px;
   opacity: 0.4;
   margin-left: 11px;
 }
@@ -181,6 +181,26 @@ input::placeholder {
   color: #0078f6;
   font-size: 14.4px;
   margin: 0 11px 15px 0;
+}
+
+@keyframes blink {
+  0% {
+    color: #0078f6;
+  }
+  50% {
+    color: transparent;
+  }
+  100% {
+    color: #0078f6;
+  }
+}
+
+.headline h6,
+.box i {
+  animation-name: blink;
+  animation-duration: 2.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
 }
 
 .highlight .headline .transparented {
@@ -774,28 +794,29 @@ button h6 {
 }
 
 .fa-square-facebook:hover {
-  color: #543ff9;
+  color: #475993;
 }
 
 .fa-instagram:hover {
   background: #f3fc00;
   background: linear-gradient(
     to top right,
-    #f0f81f 40%,
-    #fd4639 50%,
-    #c828e0 50%,
-    #f807e0 100%
+    #fdf497 0%,
+    #fdf497 5%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285aeb 90%
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .fa-twitter:hover {
-  color: #00a0f6;
+  color: #1da2f2;
 }
 
 .fa-linkedin-in:hover {
-  color: #0078f6;
+  color: #0077b5;
 }
 
 .fa-youtube:hover,
