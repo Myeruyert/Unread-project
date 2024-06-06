@@ -85,8 +85,6 @@ menu a {
   border: none;
   background-color: transparent;
   color: #a6a6a6;
-  outline: none;
-  caret-color: #a6a6a6;
   font-size: 1.5rem;
 }
 
@@ -326,17 +324,21 @@ h1 {
   font-weight: 900;
   letter-spacing: 0.09rem;
   text-transform: uppercase;
-  margin: 0 0 1.5rem 0;
+  margin-bottom: 1.5rem;
 }
 
 .main-article p {
-  font-weight: 350;
+  font-weight: 500;
   margin: 1.5rem 0;
   text-align: justify;
 }
 
+.main-article .top-space {
+  margin-top: 1.5rem;
+}
+
 .main-article video {
-  margin-bottom: 1.5rem;
+  margin: 1.5rem 0;
 }
 
 .main-article img {
@@ -404,6 +406,11 @@ textarea::placeholder {
 .input-text-area textarea {
   height: 6.6rem;
   width: 332px;
+}
+
+input, textarea {
+  outline: none;
+  caret-color: #a6a6a6;
 }
 
 form button {

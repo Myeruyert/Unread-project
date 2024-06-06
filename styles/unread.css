@@ -1,3 +1,5 @@
+
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -6,8 +8,6 @@
 
 html {
   font: normal 10px / 20px "Helvetica Neue", Helvetica, Arial, sans-serif;
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
   background: #fafafa;
   color: #1c1c1c;
 }
@@ -21,7 +21,7 @@ body {
 
 .intro {
   width: 100%;
-  height: 60vh;
+  height: 65vh;
   background-image: url("https://unread.today/files/2f1c26d7-6f24-46c8-9307-bbfecc8b41b1/1c8032975647515c919c1e4b30138726.jpg");
   background-size: cover;
   background-position: center;
@@ -55,7 +55,7 @@ menu {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 1116px;
+  max-width: 1116px;
   height: 42px;
 }
 
@@ -118,7 +118,7 @@ input::placeholder {
 
 .next-article .box {
   padding: 8px 18px;
-  border-radius: 30px;
+  border-radius: 3rem;
   background-color: rgba(255, 255, 255, 0.5);
   font-weight: 500;
   display: flex;
@@ -823,3 +823,10 @@ button h6 {
 .fa-soundcloud:hover {
   color: rgb(254, 48, 48);
 }
+
+/* @media only screen and (min-width: 300px) {
+  main,
+.footer-container {
+  width: 50%;
+}
+} */
