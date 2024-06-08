@@ -19,7 +19,6 @@ body {
 
 .intro {
   width: 100%;
-  height: 60vh;
   background-image: url("https://unread.today/files/2f1c26d7-6f24-46c8-9307-bbfecc8b41b1/1c8032975647515c919c1e4b30138726.jpg");
   background-size: cover;
   background-position: center;
@@ -121,13 +120,14 @@ input::placeholder {
   background-color: rgba(255, 255, 255, 0.5);
   font-weight: 500;
   display: flex;
-  align-items: center;
+  /* align-items: center; */
   gap: 5px;
 }
 
-.fa-circle {
+/* .fa-circle {
   font-size: 5px;
-}
+  vertical-align: center;
+} */
 
 .social-media i {
   font-size: 15px;
@@ -146,14 +146,14 @@ input::placeholder {
   z-index: 10;
   display: flex;
   justify-content: center;
-  margin-top: 40px;
+  align-items: center;
+  margin-top: 4rem;
 }
 
 .image-box {
-  width: 35%;
-  height: auto;
+  width: 45rem;
+  height: 45rem;
   border-radius: 20px;
-  margin-left: -90px;
   overflow: hidden;
 }
 
@@ -174,6 +174,7 @@ input::placeholder {
 
 .highlight .headline {
   padding: 4.5em 0 3em 6.1em;
+  width: 50%;
 }
 
 .headline h6 {
@@ -195,7 +196,7 @@ input::placeholder {
 }
 
 .highlight .headline h6,
-.box i {
+.next-article .box::after {
   animation-name: blink;
   animation-duration: 2.5s;
   animation-iteration-count: infinite;
@@ -247,22 +248,16 @@ a {
   font-weight: 700;
 }
 
-.recommended-articles {
-  width: 100%;
-  height: 250px;
-  background-color: black;
-}
-
 .editors-choice {
   width: 100%;
   background-color: #000;
 }
+
 .inside-box {
   width: 60%;
   display: flex;
   justify-content: space-between;
   margin: auto;
-  left: 23%;
   padding-bottom: 2.8rem;
 }
 
@@ -289,6 +284,12 @@ a {
   margin-left: -2.5px;
 }
 
+.recommended-articles {
+  width: 100%;
+  height: 250px;
+  background-color: black;
+}
+
 .slider {
   position: relative;
   width: calc(100% - 50px);
@@ -304,11 +305,13 @@ a {
   padding-left: 2rem;
   display: flex;
   gap: 25px;
+  overflow: auto;
+  white-space: nowrap;
 }
 
 .slider-container .element {
-  min-height: 425px;
-  width: 20%;
+  min-height: 42.5rem;
+  min-width: 30rem;
   background-position: center;
   background-size: cover;
   border-radius: 0.9rem;
@@ -318,7 +321,6 @@ a {
   flex-direction: column;
   justify-content: space-between;
   position: relative;
-  overflow: hidden;
   background-blend-mode: darken;
   background-color: rgba(0, 0, 0, 0.25);
 }
@@ -336,6 +338,7 @@ a {
 .lead,
 .title {
   z-index: 10;
+  text-wrap: wrap;
 }
 
 .dot::before {
@@ -346,7 +349,7 @@ a {
   height: 6px;
   border-radius: 10px;
   width: 6px;
-  margin-top: 0;
+  margin-top: -4px;
 }
 
 .view-number {
@@ -429,16 +432,20 @@ article .profile span a {
   padding: 2.8em 6.5em 2em 5.1em;
   transition: all 1s ease-in-out;
   box-shadow: 0px 0px 50px 4px rgba(209, 209, 209, 0.3);
+  transition-duration: 0.5s;
 }
 
 .box-container:hover {
   box-shadow: 0px 0px 50px 4px rgb(175, 175, 175, 0.8);
 }
 
+.grid-box {
+  transition-duration: 0.5s;
+}
+
 article:hover,
 .grid-box:hover {
   translate: 0 -10px 0;
-  transition-duration: 0.5s;
 }
 
 .right-side {
@@ -450,17 +457,20 @@ article:hover,
 }
 
 .headline h6 {
-  line-height: 2.2rem;
   font-weight: 700;
   letter-spacing: 0.03rem;
 }
 
-.box-container .headline h6::before {
+.box-container .headline h6::before, .next-article .box::after {
   content: "•";
   font-size: 2.4rem;
   vertical-align: middle;
   color: #0078f6;
-  margin: 0 10px 0 -22px;
+  margin-top: 1.32px;
+}
+
+.box-container .headline h6::before {
+  margin: 0px 10px 0 -20px;
 }
 
 .headline h3 {
@@ -838,74 +848,6 @@ button h6 {
 }
 
 @media only screen and (max-width: 480px) {
-  .intro {
-    padding: 0 20px;
-    width: 100%;
-    height: 100%;
-  }
-
-  .fa-magnifying-glass {
-    margin: 2px 10px 0 0px;
-    opacity: 1;
-  }
-
-  .searchbox input,
-  .next-article,
-  .social-media,
-  .image-box {
-    display: none;
-  }
-
-  .highlight {
-    width: 100%;
-  }
-
-  .highlight .headline {
-    padding: 0 20px;
-  }
-
-  .highlight .headline h1 {
-    font-size: 2.8rem;
-    line-height: 3.5rem;
-  }
-
-  .headline h6 {
-    font-size: 1.2rem;
-    line-height: 2.1rem;
-  }
-
-  .highlight .headline .profile {
-    margin-top: 2rem;
-  }
-
-  .inside-box {
-    width: 100%;
-    padding: 5.4rem 2rem 2rem 2rem;
-  }
-
-  main,
-  .footer-container {
-    width: 100%;
-    padding: 0 2rem;
-  }
-
-  .box-container {
-    padding: 22px 33px;
-  }
-
-  .box-container .photo {
-    width: 88px;
-    height: 88px;
-  }
-
-  .headline h3 {
-    margin-bottom: 0px;
-  }
-
-  .headline h6 {
-    line-height: 1rem;
-  }
-
   .grid-container {
     grid-template-columns: repeat(1, 100%);
     grid-template-rows: repeat(8);
@@ -949,107 +891,23 @@ button h6 {
     gap: 50px;
   }
 
-  .buttons button {
-    width: 90%;
-  }
-
   .apps-link a img {
     width: 45%;
-  }
-
-  .text-container {
-    width: 100%;
   }
 
   .footer-nav,
   .copyright {
     display: none;
   }
-
-  .categories {
-    flex-wrap: wrap;
-    gap: 50px;
-    padding: 0 14px;
-  }
-
-  .social-links .fa-brands {
-    font-size: 3rem;
-  }
-
-  .social-links {
-    flex-wrap: wrap;
-  }
 }
 
 @media only screen and (min-width: 481px) and (max-width: 768px) {
-  .intro {
-    padding: 0 20px;
-    width: 100%;
-    height: 100%;
-  }
-
-  .fa-magnifying-glass {
-    margin: 2px 10px 0 0px;
-    opacity: 1;
-  }
-
-  .searchbox input,
-  .next-article,
-  .social-media,
-  .image-box {
-    display: none;
-  }
-
-  .highlight {
-    width: 100%;
-  }
-
   .highlight .headline {
-    padding: 0 20px;
     width: 100%;
   }
 
   .highlight .headline h1 {
-    font-size: 2.8rem;
-    line-height: 3.5rem;
     max-width: 100%;
-  }
-
-  .headline h6 {
-    font-size: 1.2rem;
-    line-height: 2.1rem;
-  }
-
-  .highlight .headline .profile {
-    margin-top: 2rem;
-  }
-
-  .inside-box {
-    width: 100%;
-    padding: 5.4rem 2rem 2rem 2rem;
-  }
-
-  main,
-  .footer-container {
-    width: 100%;
-    padding: 0 2rem;
-  }
-
-  .box-container {
-    padding: 22px 33px;
-  }
-
-  .box-container .photo {
-    width: 88px;
-    height: 88px;
-  }
-
-  .headline h3 {
-    margin-bottom: 0px;
-  }
-
-  .headline h6 {
-    line-height: 1rem;
   }
 
   .grid-container {
@@ -1083,14 +941,6 @@ button h6 {
     grid-row: 4/4;
   }
 
-  .buttons button {
-    width: 90%;
-  }
-
-  .text-container {
-    width: 100%;
-  }
-
   .text-container .copyright {
     display: none;
   }
@@ -1099,49 +949,90 @@ button h6 {
     display: block;
   }
 
+  .footer-nav {
+    margin: 0 0 4rem -10rem;
+  }
+
+  .large-container {
+    display: flex;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .fa-magnifying-glass {
+    margin: 2px 10px 0 0px;
+    opacity: 1;
+  }
+
+  .searchbox input,
+  .next-article,
+  .social-media,
+  .image-box {
+    display: none;
+  }
+
+  .highlight .headline {
+    padding: 0 20px;
+    width: 100%;
+  }
+
+  .highlight .headline h1 {
+    font-size: 2.8rem;
+    line-height: 3.5rem;
+  }
+
+  .headline h6 {
+    font-size: 1.2rem;
+    line-height: 2.1rem;
+  }
+
+  .box-container .photo {
+    width: 88px;
+    height: 88px;
+  }
+
+  .headline h3 {
+    margin-bottom: 0px;
+  }
+
+  .headline h6 {
+    line-height: 1rem;
+  }
+
+  .buttons button {
+    width: 90%;
+  }
+
+  .text-container {
+    width: 100%;
+  }
+
   .categories {
     flex-wrap: wrap;
     gap: 50px;
     padding: 0 14px;
   }
 
-  .footer-nav {
-    margin: 0 0 4rem -10rem;
-  }
-
   .social-links .fa-brands {
     font-size: 3rem;
+  }
+
+  .social-links {
+    flex-wrap: wrap;
+  }
+
+  main,
+  .footer-container {
+    width: 100%;
+    padding: 0 2rem;
   }
 }
 
 @media only screen and (min-width: 769px) and (max-width: 1024px) {
-  .intro {
-    padding: 0 20px;
-    width: 100%;
-    height: 100%;
-  }
-
-  header {
-    justify-content: space-around;
-    gap: 1.5rem;
-  }
-
-  .social-media,
-  .next-article b {
-    display: none;
-  }
-
-  .highlight,
-  .image-box {
-    width: 90%;
-  }
-
   .image-box {
     margin-left: 0;
-  }
-
-  .img-pic {
-    width: 35rem;
+    width: 30rem;
+    height: 30rem;
   }
 
   .highlight .headline {
@@ -1158,6 +1049,69 @@ button h6 {
     line-height: 2.1rem;
   }
 
+  .buttons button {
+    width: 90%;
+  }
+
+  .social-links .fa-brands {
+    font-size: 3rem;
+  }
+
+  main,
+  .footer-container {
+    width: 100%;
+    padding: 0 2rem;
+  }
+}
+
+@media only screen and (min-width: 1025px) and (max-width: 1200px) {
+  .image-box {
+    margin-left: 0;
+    width: 35rem;
+    height: 35rem;
+  }
+
+  main,
+  .footer-container {
+    width: 85%;
+    padding: 0 2rem;
+  }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1200px) {
+  header {
+    justify-content: space-around;
+    gap: 1.5rem;
+  }
+
+  .social-media,
+  .next-article b {
+    display: none;
+  }
+
+  article {
+    max-width: 640px;
+  }
+}
+
+@media only screen and (min-width: 1201px) and (max-width: 1400px) {
+  main,
+  .footer-container {
+    width: 85%;
+    padding: 0 2rem;
+  }
+}
+
+@media only screen and (max-width: 1400px) {
+  .intro {
+    padding: 0 20px;
+    height: 100%;
+  }
+
+  .highlight {
+    width: 100%;
+  }
+
   .highlight .headline .profile {
     margin-top: 2rem;
   }
@@ -1167,25 +1121,12 @@ button h6 {
     padding: 5.4rem 2rem 2rem 2rem;
   }
 
-  main,
-  .footer-container {
-    width: 100%;
-    padding: 0 2rem;
-  }
-
   .box-container {
     padding: 22px 33px;
   }
 
-  article {
-    max-width: 640px;
-  }
-
-  .buttons button {
-    width: 90%;
-  }
-
-  .social-links .fa-brands {
-    font-size: 3rem;
-  }
+  .slider-container .element {
+    min-height: 32rem;
+    min-width: 21.9rem;
+}
 }
